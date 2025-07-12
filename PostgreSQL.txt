@@ -1,0 +1,88 @@
+Create DATABASE ansh_it_versity_retail_db;
+
+CREATE USER user1 WITH ENCRYPTED PASSWORD 'abc321';
+
+GRANT ALL ON DATABASE ansh_it_versity_retail_db TO user1;
+
+===========================================================
+
+SELECT 
+category_id,
+category_department_id,
+category_name 
+FROM categories
+ORDER BY category_id ASC LIMIT 100
+--category_department_id (FK)-->Department
+
+
+===========================================================
+
+SELECT 
+customer_id,
+customer_fname,
+customer_lname,
+customer_email,
+customer_password,
+customer_street,
+customer_city,
+customer_state,
+customer_zipcode 
+FROM customers
+ORDER BY customer_id ASC LIMIT 100
+
+
+
+===========================================================
+
+SELECT 
+department_id,
+department_name
+FROM departments
+ORDER BY department_id ASC LIMIT 100
+
+
+===========================================================
+
+SELECT 
+order_item_id,
+order_item_order_id,
+order_item_product_id,
+order_item_subtotal,
+order_item_product_price
+FROM order_items
+ORDER BY order_item_id ASC LIMIT 100
+--order_item_order_id (FK)-->orders
+--order_item_product_id (FK)-->products
+
+
+
+===========================================================
+
+SELECT 
+order_id,
+order_date,
+order_customer_id,
+order_status
+FROM orders
+ORDER BY order_id ASC LIMIT 100
+--order_customer_id (FK) --> customers
+
+
+
+===========================================================
+
+SELECT 
+product_id,
+product_category_id,
+product_description,
+product_price,
+product_image FROM products
+ORDER BY product_id ASC LIMIT 100
+--product_category_id (FK) --> categories
+
+
+
+
+===========================================================
+
+
