@@ -67,8 +67,6 @@ FROM orders
 ORDER BY order_id ASC LIMIT 100
 --order_customer_id (FK) --> customers
 
-
-
 ===========================================================
 
 SELECT 
@@ -79,9 +77,6 @@ product_price,
 product_image FROM products
 ORDER BY product_id ASC LIMIT 100
 --product_category_id (FK) --> categories
-
-
-
 
 ===========================================================
 
